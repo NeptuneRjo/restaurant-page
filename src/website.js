@@ -1,6 +1,7 @@
 import { connected } from "process"
 import { container } from "webpack";
 import './style.css';
+import displayHome from './home';
 
 const content = document.getElementById('content')
 
@@ -15,11 +16,6 @@ function buildHeader() {
 
     header.appendChild(buildNav());
 
-    const navVisuals = document.createElement('div')
-    navVisuals.setAttribute('id', 'nav-visuals')
-    header.appendChild(navVisuals)
-
-
     return header;
 }
 
@@ -33,6 +29,8 @@ function buildNav() {
     home.setAttribute('id', 'home-tab')
     home.innerText = "Home"
     nav.appendChild(home)
+    window.onload = home.style.backgroundColor = "#ee2a00"
+
     // home.onclick = displayhome();
 
     const menu = document.createElement('button')
@@ -44,7 +42,7 @@ function buildNav() {
 
     const about = document.createElement('button')
     about.classList = "nav-button"
-    about.setAttribute('id', 'about')
+    about.setAttribute('id', 'about-tab')
     about.innerText = "about"
     nav.appendChild(about)
     // about.onclick = displayAbout();
@@ -74,13 +72,35 @@ function buildContainer() {
     const container = document.createElement('div')
     container.setAttribute('id', "container")
 
+    window.onload = container.appendChild(displayHome())
+
     return container;
+}
+
+function events() {
+    const home = document.getElementById('home-tab')
+    const menu = document.getElementById('menu-tab')
+    const about = document.getElementById('about-tab')
+
+    home.addEventListener('click', function() {
+        event.target.style.backgroundColor = "#ee2a00"
+        menu.style.backgroundColor = "#0b1013"
+        about.style.backgroundColor = "#0b1013"
+    })
+    about.addEventListener('click', function() {
+        event.target.style.backgroundColor = "#ee2a00"
+        home.style.backgroundColor = "#0b1013"
+        menu.style.backgroundColor = "#0b1013"
+    })
+    menu.addEventListener('click', function() {
+        event.target.style.backgroundColor = "#ee2a00"
+        home.style.backgroundColor = "#0b1013"
+        about.style.backgroundColor = "#0b1013"
+    })
 }
 
 // import from modules
 
-// function displayHome() {
-// }
 
 // function displayMenu() {
 
@@ -96,6 +116,8 @@ function initializeContent() {
     content.appendChild(buildHeader());
     content.appendChild(buildContainer());
     content.appendChild(buildFooter());
+
+    events();
 
     return content;
 }
