@@ -14,6 +14,11 @@ function buildHeader() {
 
     header.appendChild(buildNav());
 
+    const navVisuals = document.createElement('div')
+    navVisuals.setAttribute('id', 'nav-visuals')
+    header.appendChild(navVisuals)
+
+
     return header;
 }
 
