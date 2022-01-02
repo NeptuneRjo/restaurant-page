@@ -1,15 +1,19 @@
-import * as url from './hero-image.jpg'
+// import Icon from './hero-image.jpg'
 
 
 function heroImages() {
     const hero = document.createElement('img');
-    hero.src = url.default
+    hero.src = './hero-image.jpg'
+
+    return hero;
 }
 
 function quickDescription() {
     const description = document.createElement('p')
     description.setAttribute('id', "home-description")
     description.innerText = "viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida" 
+
+    return description;
 }
 
 function storeHours() {
@@ -45,8 +49,18 @@ function storeHours() {
     weekend.classList = "hours"
     weekend.innerText = "Weekends 10am - 10:30pm"
     hours.appendChild(weekend)
+
+    return hours;
 }
 
 function displayHome() {
+    const home = document.createElement('div')
 
+    home.appendChild(heroImages())
+    home.appendChild(quickDescription())
+    home.appendChild(storeHours())
+
+    return home;
 }
+
+export default displayHome;
