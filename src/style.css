@@ -20,20 +20,42 @@ body {
     top: 0;
     height: 100px;
     width: 100%;
-    /* background-color: #0b1013; */
+    background-color: #0b1013;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    border: solid 1px black;
 }
 
 #title {
     font-family: "Licorice";
     font-size: 3.5ch;
-    margin-top: .5rem;
-    /* color: #f9f8fb; */
+    margin: .5rem 0;
+    font-weight: bold;
+    width: 50%;
+    color: #f9f8fb;
 }
+
+#nav {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.nav-button {
+    width: 100%;
+    border-radius: 0;
+    border: transparent;
+    background-color: #0b1013;
+    border: solid 2px #ee2a00;
+    border-bottom: transparent;
+    color: #f9f8fb;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
 
 #footer {
     position: absolute;
