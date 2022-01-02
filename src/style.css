@@ -63,6 +63,10 @@ body {
 #container {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px red;
 }
 
 #footer {
@@ -79,4 +83,16 @@ body {
 
 a, a:visited {
     color: #f9f8fb;
+}
+
+#home {
+    border: solid 1px green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-image {
+    background: url('hero-image.jpg');
 }
