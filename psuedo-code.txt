@@ -1,0 +1,16 @@
+color scheme: 
+    contrast: #ee2a00
+    black: #0b1013
+    off-white: #f9f8fb
+
+fonts: 
+   Yanone Kaffesatz: @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+   Josefin Sans: @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
+
+1. Module for initial page load
+    - loads website on home page
+2. Call in index.js
+    - Have Header, Footer, and Tabs be the default display along with the Home module
+3. Write each tab in its own Module
+4. Write tab-switching logic in index.js
