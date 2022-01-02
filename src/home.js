@@ -1,11 +1,16 @@
-// import Icon from './hero-image.jpg'
+// import './hero-image.jpg'
 
 
 function heroImages() {
-    const hero = document.createElement('img');
-    hero.src = './hero-image.jpg'
+    const heroContainer = document.createElement('div')
+    heroContainer.setAttribute('id', 'hero-container')
+    
+    const img = new Image()
+    img.src = "./46386875f6ed55795884.jpg"
+    img.setAttribute('id', 'hero-image')
+    heroContainer.appendChild(img)
 
-    return hero;
+    return heroContainer;
 }
 
 function quickDescription() {
@@ -55,6 +60,7 @@ function storeHours() {
 
 function displayHome() {
     const home = document.createElement('div')
+    home.setAttribute('id', 'home')
 
     home.appendChild(heroImages())
     home.appendChild(quickDescription())
