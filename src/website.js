@@ -55,8 +55,15 @@ function buildFooter() {
     const footer = document.createElement('div')
     footer.setAttribute('id', 'footer')
 
-    const attribution = document.createElement('p')
+    const attribution = document.createElement('div')
     attribution.setAttribute('id', 'attribute')
+
+    const link = document.createElement('a')
+    link.setAttribute('href', "https://github.com/NeptuneRjo")
+    link.innerHTML = "Created by NeptuneRjo" 
+    link.title = "Link to github profile"
+
+    attribution.appendChild(link)
     footer.appendChild(attribution)
 
     return footer;
