@@ -1,4 +1,5 @@
 import { connected } from "process"
+import { container } from "webpack";
 import './style.css';
 
 const content = document.getElementById('content')
@@ -69,8 +70,16 @@ function buildFooter() {
     return footer;
 }
 
-// function displayHome() {
+function buildContainer() {
+    const container = document.createElement('div')
+    container.setAttribute('id', "container")
 
+    return container;
+}
+
+// import from modules
+
+// function displayHome() {
 // }
 
 // function displayMenu() {
@@ -85,6 +94,7 @@ function initializeContent() {
     const content = document.getElementById('content');
 
     content.appendChild(buildHeader());
+    content.appendChild(buildContainer());
     content.appendChild(buildFooter());
 
     return content;
