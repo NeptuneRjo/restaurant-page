@@ -29,7 +29,7 @@ body {
 #title {
     font-family: "Licorice";
     font-size: 3.5ch;
-    margin: .5rem 0;
+    margin: .75rem 0;
     font-weight: bold;
     width: 50%;
     color: #f9f8fb;
@@ -60,12 +60,18 @@ body {
     text-transform: uppercase;
 }
 
-
-
 #footer {
     position: absolute;
     bottom: 0;
-    height: 100px;
+    height: 50px;
     width: 100%;
     background-color: #0b1013;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f9f8fb;
+}
+
+a, a:visited {
+    color: #f9f8fb;
 }
