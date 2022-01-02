@@ -7,7 +7,7 @@ function buildHeader() {
     const header = document.createElement('div')
     header.setAttribute('id', 'header')
 
-    const title = document.createElement('h4')
+    const title = document.createElement('div')
     title.setAttribute('id', 'title')
     title.innerText = "Sushi Restaurant"
     header.appendChild(title)
