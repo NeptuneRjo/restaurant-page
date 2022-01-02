@@ -9,30 +9,41 @@ function buildHeader() {
 
     const title = document.createElement('h4')
     title.setAttribute('id', 'title')
+    title.innerText = "Sushi Restaurant"
     header.appendChild(title)
 
+    header.appendChild(buildNav());
+
+    return header;
+}
+
+function buildNav() {
     const nav = document.createElement('div')
     nav.setAttribute('id', 'nav')
-    header.appendChild(nav)
-
 
     // Navigation Buttons
     const home = document.createElement('button')
-    home.classList('nav-button')
+    home.classList = "nav-button"
     home.setAttribute('id', 'home-tab')
+    home.innerText = "Home"
     nav.appendChild(home)
+    // home.onclick = displayhome();
 
     const menu = document.createElement('button')
-    menu.classList('nav-button')
+    menu.classList = "nav-button"
     menu.setAttribute('id', 'menu-tab')
+    menu.innerText = "menu"
     nav.appendChild(menu)
+    // menu.onclick = displayMenu();
 
     const about = document.createElement('button')
-    about.classList('nav-button')
+    about.classList = "nav-button"
     about.setAttribute('id', 'about')
+    about.innerText = "about"
     nav.appendChild(about)
+    // about.onclick = displayAbout();
 
-    return header;
+    return nav;
 }
 
 function buildFooter() {
@@ -41,4 +52,30 @@ function buildFooter() {
 
     const attribution = document.createElement('p')
     attribution.setAttribute('id', 'attribute')
+    footer.appendChild(attribution)
+
+    return footer;
 }
+
+// function displayHome() {
+
+// }
+
+// function displayMenu() {
+
+// }
+
+// function displayAbout() {
+
+// }
+
+function initializeContent() {
+    const content = document.getElementById('content');
+
+    content.appendChild(buildHeader());
+    content.appendChild(buildFooter());
+
+    return content;
+}
+
+export default initializeContent;
