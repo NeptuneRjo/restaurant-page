@@ -71,7 +71,7 @@ function buildFooter() {
 function buildContainer() {
     const container = document.createElement('div')
     container.setAttribute('id', "container")
-
+    
     window.onload = container.appendChild(displayHome())
 
     return container;
@@ -81,22 +81,34 @@ function events() {
     const home = document.getElementById('home-tab')
     const menu = document.getElementById('menu-tab')
     const about = document.getElementById('about-tab')
+    const container = document.getElementById('container')
+
 
     home.addEventListener('click', function() {
-        event.target.style.backgroundColor = "#ee2a00"
-        menu.style.backgroundColor = "#0b1013"
+        displayContent(displayHome())
+        event.target.style.backgroundColor = "#ee2a00"      
         about.style.backgroundColor = "#0b1013"
+        menu.style.backgroundColor = "#0b1013"  
     })
     about.addEventListener('click', function() {
         event.target.style.backgroundColor = "#ee2a00"
         home.style.backgroundColor = "#0b1013"
         menu.style.backgroundColor = "#0b1013"
+        // container.appendChild(displayAbout())
     })
     menu.addEventListener('click', function() {
         event.target.style.backgroundColor = "#ee2a00"
         home.style.backgroundColor = "#0b1013"
         about.style.backgroundColor = "#0b1013"
+        // container.appendChild(displayMenu())
     })
+}
+
+function displayContent(navTarget) {
+    const container = document.getElementById('container')
+    container.innerHTML = ""
+
+    container.appendChild(navTarget);
 }
 
 // import from modules
