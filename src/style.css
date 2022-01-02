@@ -8,7 +8,7 @@ body {
 }
 
 #content {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -43,12 +43,6 @@ body {
     gap: .5rem;
 }
 
-#nav-visuals {
-    width: 100%;
-    height: 25px;
-    background: #f9f8fb;
-}
-
 .nav-button {
     width: 100%;
     border-radius: 0;
@@ -66,11 +60,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px red;
+    flex-direction: column;
 }
 
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     height: 50px;
     width: 100%;
@@ -86,13 +80,46 @@ a, a:visited {
 }
 
 #home {
-    border: solid 1px green;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    padding-top: 8rem;
+    width: 100%;
+}
+
+#hero-container {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    height: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee2a00;
 }
 
 #hero-image {
-    background: url('hero-image.jpg');
+    height: 350px;
+    width: auto;
+}
+
+#home-description {
+    width: 34ch;
+    text-align: center;
+    font-style: italic;
+    opacity: .8;
+    border-bottom: solid 3px #ee2a00;
+    padding: 1rem 0;
+}
+
+#hours {
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

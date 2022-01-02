@@ -37,7 +37,7 @@ function storeHours() {
 
     const wed = document.createElement('p')
     wed.classList = "hours"
-    wed.innerText = "Wednesday12pm - 10pm"
+    wed.innerText = "Wednesday 12pm - 10pm"
     hours.appendChild(wed)
 
     const thur = document.createElement('p')
