@@ -2,6 +2,7 @@ import { connected } from "process"
 import { container } from "webpack";
 import './style.css';
 import displayHome from './home';
+import displayMenu from './menu';
 
 const content = document.getElementById('content')
 
@@ -72,7 +73,7 @@ function buildContainer() {
     const container = document.createElement('div')
     container.setAttribute('id', "container")
     
-    window.onload = container.appendChild(displayHome())
+    window.onload = container.appendChild(displayMenu())
 
     return container;
 }
