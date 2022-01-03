@@ -73,7 +73,7 @@ function buildContainer() {
     const container = document.createElement('div')
     container.setAttribute('id', "container")
     
-    window.onload = container.appendChild(displayMenu())
+    window.onload = container.appendChild(displayHome())
 
     return container;
 }
@@ -98,6 +98,7 @@ function events() {
         // container.appendChild(displayAbout())
     })
     menu.addEventListener('click', function() {
+        displayContent(displayMenu())
         event.target.style.backgroundColor = "#ee2a00"
         home.style.backgroundColor = "#0b1013"
         about.style.backgroundColor = "#0b1013"
