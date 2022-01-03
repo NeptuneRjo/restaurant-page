@@ -15,6 +15,7 @@ function MenuItem(image, name, desc, price) {
     
     const menuImage = new Image()
     menuImage.src = image;
+    menuImage.classList = "menu-image"
     item.appendChild(menuImage)
 
     const itemName = document.createElement('div')

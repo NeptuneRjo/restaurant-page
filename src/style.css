@@ -79,7 +79,7 @@ a, a:visited {
     color: #f9f8fb;
 }
 
-#home {
+#home, #menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,5 +121,46 @@ a, a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+#menu-header {
+    margin: 5rem 0;
+    height: 175px;
+    font-size: 3ch;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9f8fb;
+    background-color: #ee2a00;
+}
+
+.menu-image {
+    height: auto;
+    max-width: 90%;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25ch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
+    border-bottom: solid 1px #ee2a00;
+    min-height: 300px;
+}
+
+#menu-item-name {
+    font-size: 2ch;
+    font-style: bold;
+    text-align: center;
+}
+
+#menu-description {
+    font-size: 1.5ch;
+    text-align: center;
+    opacity: 80%;
 }
