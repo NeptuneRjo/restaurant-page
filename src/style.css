@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     background-color: #f9f8fb;
     /* font-family: "Yanone Kaffesatz", sans-serif; */
     font-family: "Josefin Sans", sans-serif;
@@ -31,8 +31,9 @@ body {
     font-size: 3.5ch;
     margin: .75rem 0;
     font-weight: bold;
-    width: 50%;
+    width: 100%;
     color: #f9f8fb;
+    text-align: center;
 }
 
 #nav {
@@ -224,4 +225,53 @@ a, a:visited {
     height: 100px;
     line-height: 2.5ch;
     text-align: center;
+}
+
+@media screen and (min-height: 760px) {
+    #footer {
+        position: relative;
+        bottom: 0;
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    #title {
+        width: 50%;
+        text-align: left;
+        padding-left: 5rem;
+    }
+
+    #nav {
+        width: 50%;
+        height: 50%;
+    }
+
+    #home-description {
+        font-size: 2ch;
+        padding: 2rem 0;
+        margin: 10rem 0;
+    }
+
+    #hours {
+        flex-direction: row;
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .hours {
+        text-align: center;
+        width: 15ch;
+        font-size: 2ch;
+    }
+
+    #statement-container, #review-container {
+        width: 50%;
+    }
+
 }

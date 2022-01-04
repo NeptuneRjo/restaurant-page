@@ -33,21 +33,17 @@ function buildNav() {
     nav.appendChild(home)
     window.onload = home.style.backgroundColor = "#ee2a00"
 
-    // home.onclick = displayhome();
-
     const menu = document.createElement('button')
     menu.classList = "nav-button"
     menu.setAttribute('id', 'menu-tab')
     menu.innerText = "menu"
     nav.appendChild(menu)
-    // menu.onclick = displayMenu();
 
     const about = document.createElement('button')
     about.classList = "nav-button"
     about.setAttribute('id', 'about-tab')
     about.innerText = "about"
     nav.appendChild(about)
-    // about.onclick = displayAbout();
 
     return nav;
 }
@@ -74,7 +70,7 @@ function buildContainer() {
     const container = document.createElement('div')
     container.setAttribute('id', "container")
     
-    window.onload = container.appendChild(displayHome())
+    window.onload = container.appendChild(displayAbout())
 
     return container;
 }
@@ -83,7 +79,6 @@ function events() {
     const home = document.getElementById('home-tab')
     const menu = document.getElementById('menu-tab')
     const about = document.getElementById('about-tab')
-    const container = document.getElementById('container')
 
 
     home.addEventListener('click', function() {
@@ -97,14 +92,12 @@ function events() {
         event.target.style.backgroundColor = "#ee2a00"
         home.style.backgroundColor = "#0b1013"
         menu.style.backgroundColor = "#0b1013"
-        // container.appendChild(displayAbout())
     })
     menu.addEventListener('click', function() {
         displayContent(displayMenu())
         event.target.style.backgroundColor = "#ee2a00"
         home.style.backgroundColor = "#0b1013"
         about.style.backgroundColor = "#0b1013"
-        // container.appendChild(displayMenu())
     })
 }
 
@@ -114,17 +107,6 @@ function displayContent(navTarget) {
 
     container.appendChild(navTarget);
 }
-
-// import from modules
-
-
-// function displayMenu() {
-
-// }
-
-// function displayAbout() {
-
-// }
 
 function initializeContent() {
     const content = document.getElementById('content');

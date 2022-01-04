@@ -27,32 +27,32 @@ function storeHours() {
 
     const mon = document.createElement('p')
     mon.classList = "hours"
-    mon.innerText = "Monday 12pm - 10pm"
+    mon.innerText = "Monday \n12pm - 10pm"
     hours.appendChild(mon)
 
     const tue = document.createElement('p')
     tue.classList = "hours"
-    tue.innerText = "Tuesday 12pm - 10pm"
+    tue.innerText = "Tuesday \n12pm - 10pm"
     hours.appendChild(tue)
 
     const wed = document.createElement('p')
     wed.classList = "hours"
-    wed.innerText = "Wednesday 12pm - 10pm"
+    wed.innerText = "Wednesday \n12pm - 10pm"
     hours.appendChild(wed)
 
     const thur = document.createElement('p')
     thur.classList = "hours"
-    thur.innerText = "Thursday 12pm - 10pm"
+    thur.innerText = "Thursday \n12pm - 10pm"
     hours.appendChild(thur)
 
     const fri = document.createElement('p')
     fri.classList = "hours"
-    fri.innerText = "Friday 12pm - 10pm"
+    fri.innerText = "Friday \n12pm - 10pm"
     hours.appendChild(fri)
 
     const weekend = document.createElement('p')
     weekend.classList = "hours"
-    weekend.innerText = "Weekends 10am - 10:30pm"
+    weekend.innerText = "Weekends \n10am - 11pm"
     hours.appendChild(weekend)
 
     return hours;

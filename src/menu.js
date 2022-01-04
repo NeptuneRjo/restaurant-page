@@ -44,10 +44,15 @@ function displayMenu() {
     menu.setAttribute('id', 'menu')
 
     menu.appendChild(buildHeading())
-    menu.appendChild(itemOne)
-    menu.appendChild(itemTwo)
-    menu.appendChild(itemThree)
-    menu.appendChild(itemFour)
+
+    const menuItems = document.createElement('div')
+    menuItems.setAttribute('id', 'menu-items')
+    menu.appendChild(menuItems)
+
+    menuItems.appendChild(itemOne)
+    menuItems.appendChild(itemTwo)
+    menuItems.appendChild(itemThree)
+    menuItems.appendChild(itemFour)
 
     return menu;
 }
