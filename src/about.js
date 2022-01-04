@@ -31,6 +31,7 @@ function buildReview() {
     const reviewer = document.createElement('div')
     reviewer.setAttribute('id', 'reviewer')
     reviewer.innerText = "- NeptuneRjo"
+    reviewContainer.appendChild(reviewer)
 
     return reviewContainer;
 }
@@ -53,10 +54,10 @@ function displayAbout() {
     const about = document.createElement('div')
     about.setAttribute('id', 'about')
 
-    about.appendChild(buildHeading);
-    about.appendChild(buildStatement);
-    about.appendChild(buildReview);
-    about.appendChild(buildContact);
+    about.appendChild(buildHeading());
+    about.appendChild(buildStatement());
+    about.appendChild(buildReview());
+    about.appendChild(buildContact());
 
     return about;
 }
