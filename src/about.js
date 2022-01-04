@@ -23,6 +23,11 @@ function buildReview() {
     const reviewContainer = document.createElement('div')
     reviewContainer.setAttribute('id', 'review-container')
 
+    const reviewHeading = document.createElement('div')
+    reviewHeading.setAttribute('id', 'review-heading')
+    reviewHeading.innerText = "Customer Review"
+    reviewContainer.appendChild(reviewHeading)
+
     const review = document.createElement('div');
     review.setAttribute('id', 'review')
     review.innerText = "\"sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus\""
