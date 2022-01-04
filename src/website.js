@@ -3,6 +3,7 @@ import { container } from "webpack";
 import './style.css';
 import displayHome from './home';
 import displayMenu from './menu';
+import displayAbout from './about';
 
 const content = document.getElementById('content')
 
@@ -92,6 +93,7 @@ function events() {
         menu.style.backgroundColor = "#0b1013"  
     })
     about.addEventListener('click', function() {
+        displayContent(displayAbout())
         event.target.style.backgroundColor = "#ee2a00"
         home.style.backgroundColor = "#0b1013"
         menu.style.backgroundColor = "#0b1013"
