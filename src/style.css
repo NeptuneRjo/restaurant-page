@@ -149,7 +149,7 @@ a, a:visited {
     gap: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 5rem;
-    border-bottom: solid 1px #ee2a00;
+    border-bottom: solid 3px #ee2a00;
     min-height: 300px;
 }
 
