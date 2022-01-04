@@ -79,7 +79,7 @@ a, a:visited {
     color: #f9f8fb;
 }
 
-#home, #menu {
+#home, #menu, #about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,6 +133,7 @@ a, a:visited {
     align-items: center;
     color: #f9f8fb;
     background-color: #ee2a00;
+    font-style: bold;
 }
 
 .menu-image {
@@ -163,4 +164,64 @@ a, a:visited {
     font-size: 1.5ch;
     text-align: center;
     opacity: 80%;
+}
+
+#about-header {
+    margin: 5rem 0;
+    height: 175px;
+    font-size: 3ch;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9f8fb;
+    background-color: #ee2c00f3;
+    font-style: bold;
+}
+
+#statement-container {
+    margin-bottom: 5rem;
+    width: 90%;
+    text-align: center;
+    font-size: 1.75ch;
+    font-style: italic;
+    line-height: 2.25ch;
+
+}
+
+#review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 5rem;
+}
+
+#review-heading {
+    font-size: 2ch;
+    padding-bottom: 1rem;
+}
+
+#review {
+    text-align: center;
+    opacity: 90%;
+}
+
+#reviewer {
+    width: 90%;
+    text-align: right;
+    padding: 1rem;
+}
+
+#contact-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 100px;
+    line-height: 2.5ch;
+    text-align: center;
 }
