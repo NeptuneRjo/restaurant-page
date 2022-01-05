@@ -76,32 +76,33 @@ function buildContainer() {
 }
 
 function events() {
-    const home = document.getElementById('home-tab')
-    const menu = document.getElementById('menu-tab')
-    const about = document.getElementById('about-tab')
+    const buttons = document.querySelectorAll('.nav-button')
 
-
-    home.addEventListener('click', function() {
-        displayContent(displayHome())
-        navDisplay(event.target)
-    })
-    about.addEventListener('click', function() {
-        displayContent(displayAbout())
-        navDisplay(event.target)
-    })
-    menu.addEventListener('click', function() {
-        displayContent(displayMenu())
-        navDisplay(event.target)
-    })
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function() {
+            updateDisplay(event.target)
+        })
+    }
 }
 
-function navDisplay(buttonClicked) {
+function updateDisplay(buttonClicked) {
     const buttons = document.querySelectorAll('.nav-button')
+
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = "#0b1013"
     }
 
     buttonClicked.style.backgroundColor = "#ee2a00"
+
+    if (buttonClicked.id == 'home-tab') {
+        displayContent(displayHome())
+    }
+    else if (buttonClicked.id == 'menu-tab') {
+        displayContent(displayMenu())
+    }
+    else if (buttonClicked.id == 'about-tab') {
+        displayContent(displayAbout()) 
+    }
 }
 
 function displayContent(navTarget) {
