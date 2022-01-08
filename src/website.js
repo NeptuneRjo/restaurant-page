@@ -92,9 +92,8 @@ function updateNav(buttonClicked) {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = "#0b1013"
     }
-
+    
     buttonClicked.style.backgroundColor = "#ee2a00"
-
 }
 
 function updateDisplay(toDisplay) {
