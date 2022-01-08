@@ -80,12 +80,13 @@ function events() {
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
-            updateDisplay(event.target)
+            updateNav(event.target);
+            updateDisplay(event.target);
         })
     }
 }
 
-function updateDisplay(buttonClicked) {
+function updateNav(buttonClicked) {
     const buttons = document.querySelectorAll('.nav-button')
 
     for (let i = 0; i < buttons.length; i++) {
@@ -94,13 +95,16 @@ function updateDisplay(buttonClicked) {
 
     buttonClicked.style.backgroundColor = "#ee2a00"
 
-    if (buttonClicked.id == 'home-tab') {
+}
+
+function updateDisplay(toDisplay) {
+    if (toDisplay.id == 'home-tab') {
         displayContent(displayHome())
     }
-    else if (buttonClicked.id == 'menu-tab') {
+    else if (toDisplay.id == 'menu-tab') {
         displayContent(displayMenu())
     }
-    else if (buttonClicked.id == 'about-tab') {
+    else if (toDisplay.id == 'about-tab') {
         displayContent(displayAbout()) 
     }
 }
